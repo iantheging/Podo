@@ -6,8 +6,9 @@ void main() => runApp(App());
 class App extends StatelessWidget {
   @override
    Widget build(BuildContext context) {
+     //This does nothing
     return MaterialApp(
-      title: 'My Flutter App',
+      title: 'Podo',
       home: Home(),
     );
   }
