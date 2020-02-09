@@ -9,7 +9,10 @@ class App extends StatelessWidget {
      //This does nothing
     return MaterialApp(
       title: 'Podo',
-      home: Home(),
+      home: Home(
+        // body: Center(child: _buildList()),
+      ),
+      
     );
   }
 }
