@@ -14,18 +14,29 @@ class BarsGrid extends StatelessWidget {
 }
 
 // #docregion grid
+
+
   Widget _buildGrid() => GridView.extent(
-      maxCrossAxisExtent: 150,
+      maxCrossAxisExtent: 250,
       padding: const EdgeInsets.all(4),
       mainAxisSpacing: 4,
       crossAxisSpacing: 4,
-      children: _buildGridTileList(30));
+      children: _buildGridTileList(10));
 
   // The images are saved with names pic0.jpg, pic1.jpg...pic29.jpg.
   // The List.generate() constructor allows an easy way to create
   // a list when objects have a predictable naming pattern.
   List<Container> _buildGridTileList(int count) => List.generate(
+  //     count, (i) => Container(
+  //   margin: const EdgeInsets.all(10.0),
+  //   color: Colors.amber[600],
+  //   width: 48.0,
+  //   height: 48.0,
+  // ),
+      
+      // );
       count, (i) => Container(child: Image.asset('images/pic$i.jpg')));
+
   // #enddocregion grid
 
   // #docregion list
