@@ -9,8 +9,8 @@ export class DataService {
 
   // Test data
   ELEMENT_DATA: Deal[] = [
-    {title: '21 Cent Shots', bar: 'Cys', drink: 'liquor', price: .21, date_avail: new Date(), body: ''},
-    {title: '20 Cent Shots', bar: 'Paddys', drink: 'liquor', price: .20, date_avail: new Date(), body: 'Fuck you Cys'},
+    {title: '21 Cent Shots', bar: 'Cys', drink: 'liquor', price: .21, date_start: new Date(), date_end:new Date(), body: ''},
+    {title: '20 Cent Shots', bar: 'Paddys', drink: 'liquor', price: .20, date_start: new Date(), date_end:new Date(), body: 'Fuck you Cys'},
   ];
   // Add array for bars
 

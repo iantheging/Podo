@@ -3,6 +3,7 @@ export interface Deal {
     bar: string;
     drink: string;
     price: number;
-    date_avail: Date;
+    date_start: Date;
+    date_end: Date;
     body: string;
 }

@@ -13,7 +13,7 @@ export class HomeComponent {
 
   constructor(private dataService: DataService) { }
 
-  displayedColumns = ['date_avail', 'title', 'bar', 'delete'];
+  displayedColumns: string[] = ['title', 'bar', 'drink', 'price', 'body'];
   dataSource = new DealDataSource(this.dataService);
 }
 

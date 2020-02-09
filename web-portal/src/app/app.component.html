@@ -1,4 +1,15 @@
-<mat-toolbar color="primary">Podo</mat-toolbar>
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <h1>Podo</h1>
+        <span class="menu-spacer">  </span>
+        <div>
+            <a mat-button [routerLink]="'/home'"> Home </a>
+            <a mat-button [routerLink]="'/menu'"> Menu </a>
+            <a mat-button [routerLink]="'/deals'"> Deals </a>
+            <a mat-button [routerLink]="'/settings'"> Settings </a>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>
 
 <!-- If you don't have this routes won't work -->
 <router-outlet></router-outlet>
