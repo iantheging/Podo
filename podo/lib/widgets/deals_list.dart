@@ -23,33 +23,29 @@ Widget _buildCardList() => ListView(children:[
 
 Widget _buildList() => ListView(
       children: [
-        _tile('4 Dollar Mugs', 'AJs', Icons.local_drink),
-        _tile('The Castro Theater', '429 Castro St', Icons.theaters),
-        _tile('Alamo Drafthouse Cinema', '2550 Mission St', Icons.theaters),
-        _tile('Roxie Theater', '3117 16th St', Icons.theaters),
-        _tile('United Artists Stonestown Twin', '501 Buckingham Way',
-            Icons.theaters),
-        _tile('AMC Metreon 16', '135 4th St #3000', Icons.theaters),
-        Divider(),
-        _tile('Kescaped_code#39;s Kitchen', '757 Monterey Blvd', Icons.restaurant),
-        _tile('Emmyescaped_code#39;s Restaurant', '1923 Ocean Ave', Icons.restaurant),
-        _tile(
-            'Chaiya Thai Restaurant', '272 Claremont Blvd', Icons.restaurant),
-        _tile('La Ciccia', '291 30th St', Icons.restaurant),
+        _tile('25¢ shots ', 'AJs', 'images/bar2.jpg'),
+        _tile('\$1 Bingo Wells!!!', 'Mickys', 'images/bar3.jpg'),
+        _tile('No Cover for Mugs', 'Cys', 'images/bar1.jpg'),
+        // _tile('TwoFer Tacos!', 'Es Tas', 'images/bar4.jpg'),
+
       ],
     );
 
-ListTile _tile(String title, String subtitle, IconData icon) => ListTile(
+ListTile _tile(String title, String subtitle, String img) => ListTile(
       title: Text(title,
           style: TextStyle(
             fontWeight: FontWeight.w500,
             fontSize: 20,
           )),
       subtitle: Text(subtitle),
-      leading: Icon(
-        icon,
-        color: Colors.blue[500],
+      leading: CircleAvatar(
+        backgroundImage: AssetImage(img),
       ),
+      trailing: Icon(Icons.keyboard_arrow_right),
+      onTap: () {
+        //Added action after clicked deal here
+            print('Clicked Deal');
+          },
       // contentPadding: const EdgeInsets.symmetric(vertical: 8.0)
     );
       Widget _buildCard() => SizedBox(

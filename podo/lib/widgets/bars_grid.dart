@@ -35,7 +35,7 @@ class BarsGrid extends StatelessWidget {
   // ),
       
       // );
-      count, (i) => Container(child: Image.asset('images/pic$i.jpg')));
+      count, (i) => Container(child: Image.asset('images/bar$i.jpg')));
 
   // #enddocregion grid
 
