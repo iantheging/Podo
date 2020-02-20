@@ -12,6 +12,12 @@ import { DataService } from './data/data.service';
 import { MenuComponent } from './menu/menu.component';
 import { DealsComponent } from './deals/deals.component';
 
+import { environment } from "src/environments/environment";
+import { AngularFireModule } from "@angular/fire";
+import { AngularFirestoreModule } from "@angular/fire/firestore";
+
+import { ReactiveFormsModule } from "@angular/forms";
+
 
 @NgModule({
   declarations: [
@@ -27,6 +33,8 @@ import { DealsComponent } from './deals/deals.component';
     FlexLayoutModule,
     BrowserAnimationsModule,
     MaterialModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule,
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

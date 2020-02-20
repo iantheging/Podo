@@ -3,7 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebaseConfig: {
+    apiKey: "AIzaSyBasQZ4R1aw4MNmuO6YFLVvKWBtp7z63N8",
+    authDomain: "podo-d545b.firebaseapp.com",
+    databaseURL: "https://podo-d545b.firebaseio.com",
+    projectId: "podo-d545b",
+    storageBucket: "podo-d545b.appspot.com",
+    messagingSenderId: "343389044443",
+    appId: "1:343389044443:web:a6c682e56ec944f8cf16fe",
+    measurementId: "G-4RGYX53TFP"
+  },
 };
 
 /*
