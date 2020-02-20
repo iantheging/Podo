@@ -14,7 +14,7 @@ class DealsList extends StatelessWidget {
         stream:Firestore.instance.collection('post').snapshots(),
         builder:(context,snapshot){
           if(!snapshot.hasData){
-            const Text('Loading');
+            return const Text('Loading');
           }
           else{
             return ListView.builder(
