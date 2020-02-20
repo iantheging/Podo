@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "343389044443",
+    "firebase_url": "https://podo-d545b.firebaseio.com",
+    "project_id": "podo-d545b",
+    "storage_bucket": "podo-d545b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:343389044443:android:472af9ded4070f19cf16fe",
+        "android_client_info": {
+          "package_name": "com.example.podo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "343389044443-i868arqk2l7g4lan2hlcrijc0tgbibr8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzCRjjgHEYLzt4SD_cw8wbFOI2YPROmk8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "343389044443-i868arqk2l7g4lan2hlcrijc0tgbibr8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

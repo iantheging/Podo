@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 class DealsList extends StatelessWidget {
@@ -8,7 +9,26 @@ class DealsList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       // body: _buildCardList()
-      body: _buildList()
+      // body: _buildList()
+      body: StreamBuilder(
+        stream:Firestore.instance.collection('post').snapshots(),
+        builder:(context,snapshot){
+          if(!snapshot.hasData){
+            const Text('Loading');
+          }
+          else{
+            return ListView.builder(
+              itemCount: snapshot.data.documents.length,
+              itemBuilder: (context,index){
+                DocumentSnapshot mypost=snapshot.data.documents[index];
+                return _tile('${mypost['deals']}','${mypost['title']}','${mypost['image']}');
+                // return null;
+              }
+              );
+          }
+
+        }
+      )
 
       
     );
@@ -20,6 +40,15 @@ Widget _buildCardList() => ListView(children:[
   _buildCard(),
 ],);
 
+// Widget _buildList() => ListView(
+//       children: [
+//         _tile('25¢ shots ', 'AJs', 'images/bar2.jpg'),
+//         _tile('\$1 Bingo Wells!!!', 'Mickys', 'images/bar3.jpg'),
+//         _tile('No Cover for Mugs', 'Cys', 'images/bar1.jpg'),
+//         // _tile('TwoFer Tacos!', 'Es Tas', 'images/bar4.jpg'),
+
+//       ],
+//     );
 
 Widget _buildList() => ListView(
       children: [
@@ -30,6 +59,7 @@ Widget _buildList() => ListView(
 
       ],
     );
+
 
 ListTile _tile(String title, String subtitle, String img) => ListTile(
       title: Text(title,
