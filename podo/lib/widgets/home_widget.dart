@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:podo/widgets/bars_grid.dart';
+import 'package:podo/widgets/bars_grid2.dart';
 import 'package:podo/widgets/settings.dart';
 import 'placeholder_widget.dart';
 import 'deals_list.dart';
@@ -15,7 +16,7 @@ class _HomeState extends State<Home> {
   int _currentIndex = 0;
   final List<Widget> _children = [
     DealsList(),
-    BarsGrid(),
+    BarsGrid2(),
     Settings()
   ];
 

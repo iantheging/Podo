@@ -12,7 +12,7 @@ class App extends StatelessWidget {
       home: Home(
         // body: Center(child: _buildList()),
       ),
-      
+
     );
   }
 }
